@@ -1,0 +1,21 @@
+{
+  "title": "Security & AI-Readiness Audit Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "urls": {
+      "title": "Target URLs to Audit",
+      "type": "array",
+      "description": "List of website or API URLs to scan for OWASP security headers, CORS leaks, RFC 9116 security.txt, and x402/llms.txt agent readiness.",
+      "editor": "stringList",
+      "default": ["https://example.com"]
+    },
+    "checkWellKnown": {
+      "title": "Check /.well-known/security.txt & /llms.txt",
+      "type": "boolean",
+      "description": "Probe RFC 9116 security.txt and AI agent discovery endpoints.",
+      "default": true
+    }
+  },
+  "required": ["urls"]
+}
