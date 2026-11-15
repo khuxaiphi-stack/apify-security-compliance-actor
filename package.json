@@ -1,0 +1,15 @@
+{
+  "name": "web-security-x402-compliance-auditor",
+  "version": "1.0.0",
+  "description": "Apify Pay-Per-Event Actor & MCP-compatible OWASP HTTP Security Headers + x402 AI Readiness Auditor",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node tests/audit.test.js"
+  },
+  "dependencies": {
+    "apify": "^3.2.0"
+  },
+  "author": "Huzaifa Ahmed (@khuxaiphi-stack)",
+  "license": "MIT"
+}
