@@ -1,10 +1,21 @@
 {
   "actorSpecification": 1,
   "name": "web-security-x402-compliance-auditor",
-  "title": "Web Security Headers, TLS, CORS & x402 AI Readiness Auditor (MCP-Ready)",
-  "description": "Audits any list of URLs for OWASP HTTP security headers (CSP, HSTS, X-Frame-Options, Permissions-Policy), CORS misconfigurations, security.txt (RFC 9116), and x402 / llms.txt AI Agent Monetization readiness. Built for Pay-Per-Event billing and MCP agents.",
+  "title": "OWASP HTTP Security Header, CORS & x402 AI-Readiness Auditor",
+  "description": "Audits websites and APIs for OWASP HTTP security headers (HSTS, CSP, X-Frame-Options, Referrer-Policy, Permissions-Policy), CORS wildcard+credential leaks, Server banner disclosure, and x402 AI agent micropayment readiness. Built for MCP agents and Pay-Per-Event security workflows.",
   "version": "1.0.0",
   "buildTag": "latest",
   "input": "./input_schema.json",
-  "dockerfile": "../Dockerfile"
+  "dockerfile": "../Dockerfile",
+  "output": {
+    "actorOutputSchemaVersion": 1,
+    "title": "Security & AI-Readiness Audit Results",
+    "properties": {
+      "results": {
+        "type": "string",
+        "title": "Audit Results (Dataset)",
+        "template": "{{links.apiDefaultDatasetUrl}}/items"
+      }
+    }
+  }
 }
